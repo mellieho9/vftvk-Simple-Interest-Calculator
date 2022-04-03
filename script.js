@@ -1,8 +1,9 @@
 function compute()
 {
-    if(principal.value<0)
-    {
-        console.log("The amount must be a positive quantity");
+    if(principal.value < 1){
+        alert("Amount has to be a positive quantity")
+        principal.focus()
+        return
     }
     let interest = principal.value * years.value * rate.value / 100;
     yearInFuture = new Date().getFullYear() + parseInt(years.value);
